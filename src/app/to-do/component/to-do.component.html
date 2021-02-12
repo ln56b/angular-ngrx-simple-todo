@@ -1,0 +1,41 @@
+<div>
+  <h2>Todo list</h2>
+
+  <ng-container *ngIf="ToDoError?.message">
+    <div>Some error occured. Please try again</div>
+  </ng-container>
+
+  <div *ngFor="let toDo of ToDoList">
+    <div>Name:</div>
+    <div>{{ toDo.title }}</div>
+    <div>Is completed:</div>
+    <div>{{ toDo.isCompleted }}</div>
+  </div>
+
+  <hr />
+
+  <div>
+    <h3>Create todo</h3>
+    <form (ngSubmit)="createToDo()">
+      <div>
+        <div>
+          <input
+            [(ngModel)]="title"
+            placeholder="Enter a todo"
+            name="title"
+            type="text"
+          />
+        </div>
+      </div>
+
+      <div>
+        <input [(ngModel)]="isCompleted" name="isCompleted" type="checkbox" />
+        <label for="isCompleted">Completed ?</label>
+      </div>
+
+      <div>
+        <button type="submit">Add</button>
+      </div>
+    </form>
+  </div>
+</div>

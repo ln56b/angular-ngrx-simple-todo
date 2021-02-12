@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-ngrx-todo"
+    }
+  },
+  "defaultProject": "angular-ngrx-todo",
+  "cli": {
+    "analytics": "f81a8ba9-c355-45c3-a29c-25ea912c7910"
+  }
 }
